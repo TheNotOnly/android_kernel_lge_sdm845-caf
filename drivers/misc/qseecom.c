@@ -1737,6 +1737,7 @@ static int __qseecom_process_incomplete_cmd(struct qseecom_dev_handle *data,
 			rc = -ENOENT;
 			status = QSEOS_RESULT_FAILURE;
 			goto err_resp;
+
 		}
 
 		pr_debug("waking up rcv_req_wq and waiting for send_resp_wq\n");
@@ -2062,6 +2063,7 @@ static int __qseecom_reentrancy_process_incomplete_cmd(
 			rc = -ENOENT;
 			status = QSEOS_RESULT_FAILURE;
 			goto err_resp;
+
 		}
 
 		pr_debug("waking up rcv_req_wq and waiting for send_resp_wq\n");

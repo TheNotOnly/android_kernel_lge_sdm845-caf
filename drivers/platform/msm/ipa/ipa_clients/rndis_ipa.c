@@ -1308,6 +1308,7 @@ int rndis_ipa_pipe_disconnect_notify(void *private)
 		kfree(rndis_msg);
 		return -EPERM;
 	}
+
 	netif_stop_queue(rndis_ipa_ctx->net);
 	RNDIS_IPA_DEBUG("queue stopped\n");
 
